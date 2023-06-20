@@ -68,6 +68,47 @@ export const data = {
         'Up to 14% of what you spend using ZEN Mastercard ® will materialize on your account right after the purchase.',
       ],
       buttonText: 'Order a consultation',
+    },    
+    clients: {
+      name: 'clients',
+      title: {
+        priority: 2,
+        content: 'Clients',
+      },
+      brands: [
+        {
+          source: 'assets/clients/1.svg',
+          description: 'Some description for client 1',
+        },
+        {
+          source: 'assets/clients/2.svg',
+          description: 'Some description for client 2',
+        },
+        {
+          source: 'assets/clients/3.svg',
+          description: 'Some description for client 3',
+        },
+        {
+          source: 'assets/clients/4.svg',
+          description: 'Some description for client 4',
+        },
+        {
+          source: 'assets/clients/5.svg',
+          description: 'Some description for client 5',
+        },
+        {
+          source: 'assets/clients/6.svg',
+          description: 'Some description for client 6',
+        },
+        {
+          source: 'assets/clients/7.svg',
+          description: 'Some description for client 7',
+        },
+        {
+          source: 'assets/clients/8.svg',
+          description: 'Some description for client 8',
+        },
+      ],
     },
   },
   ru: {},
