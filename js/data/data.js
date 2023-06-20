@@ -24,13 +24,29 @@ export const data = {
         },
       ],
     },
+    warranty: {
+      name: 'warranty',
+      title: {
+        priority: 2,
+        content: '1-year warranty boost',
+      },
+      texts: [
+        'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
+        'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically.',
+      ],
+      image: {
+        source: 'assets/images/2.jpg',
+        description: 'Some description for image 2',
+      },      
+    },
     care: {
       name: 'care',
       title: {
         priority: 2,
         content: 'ZEN Care',
       },
-      texts: [        
+      texts: [
+        //prettier-ignore
         'Shopping online is usually a delightful experience. Until it\'s not.',
         'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
         'But, here comes ZEN Care: a free, built-in shopping protection.',
