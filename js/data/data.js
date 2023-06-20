@@ -4,11 +4,11 @@ export const data = {
       languages: [
         {
           name: 'RU',
-          value: 'ru',
+          key: 'ru',
         },
         {
           name: 'EN',
-          value: 'en',
+          key: 'en',
         },
       ],
       nav: [
