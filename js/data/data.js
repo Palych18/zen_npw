@@ -1,10 +1,16 @@
 export const data = {
   en: {
     header: {
-      lang: {
-        url: 'en.exemple.com',
-        content: 'EN',
-      },
+      languages: [
+        {
+          name: 'RU',
+          value: 'ru',
+        },
+        {
+          name: 'EN',
+          value: 'en',
+        },
+      ],
       nav: [
         {
           target: 'download',
