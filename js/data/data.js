@@ -1,5 +1,44 @@
 export const data = {
   en: {
+    header: {
+      languages: [
+        {
+          name: 'RU',
+          key: 'ru',
+        },
+        {
+          name: 'EN',
+          key: 'en',
+        },
+      ],
+      nav: [
+        {
+          target: 'download',
+          content: 'Download',
+          type: 'anchor',
+        },
+        {
+          target: 'warranty',
+          content: 'Warranty',
+          type: 'anchor',
+        },
+        {
+          target: 'care',
+          content: 'Care',
+          type: 'anchor',
+        },
+        {
+          target: 'cashback',
+          content: 'Cashback',
+          type: 'anchor',
+        },
+        {
+          target: 'clients',
+          content: 'Clients',
+          type: 'anchor',
+        },
+      ],
+    },
     download: {
       name: 'download',
       title: {
