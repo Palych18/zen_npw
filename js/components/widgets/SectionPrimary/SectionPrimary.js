@@ -16,7 +16,7 @@ export const SectionPrimary = (data) => {
 
   if (dataKeys.length !== 4 && dataKeys.length !== 5) return '';
 
-  const {name, title, texts, image, links} = data;
+  const {name, title, texts, links, image} = data;
 
   const className = name 
     ? name 
@@ -27,9 +27,9 @@ export const SectionPrimary = (data) => {
       <div class="${className}__wrapper">
         <div class="${className}__text-block">
           ${title ? Title(title, className) : ''}
-          ${texts.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
+          ${texts?.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
           <div class="${className}__links">
-            ${links.length > 0 ? links.map((link) => BrandLink(link, className)).join('') : ''}
+            ${links?.length > 0 ? links.map((link) => BrandLink(link, className)).join('') : ''}
           </div>
           ${image ? Image(image, className) : ''}
         </div>
