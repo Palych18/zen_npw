@@ -24,10 +24,16 @@ export const SectionPrimary = (data) => {
 
   return `
     <section class="${className}">
-      ${title ? Title(title, className) : ''}
-      ${texts.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
-      ${image ? Image(image, className) : ''}
-      ${links.length > 0 ? links.map((link) => BrandLink(link, className)).join('') : ''}
+      <div class="${className}__wrapper">
+        <div class="${className}__text-block">
+          ${title ? Title(title, className) : ''}
+          ${texts.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
+          <div class="${className}__links">
+            ${links.length > 0 ? links.map((link) => BrandLink(link, className)).join('') : ''}
+          </div>
+          ${image ? Image(image, className) : ''}
+        </div>
+      </div>
     </section>
   `;
 };

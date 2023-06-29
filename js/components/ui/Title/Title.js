@@ -12,7 +12,7 @@
  */
 
 export const Title = (title, parentClassName) => {
-  if (!Object.keys(title).length !== 2) return '';
+  if (Object.keys(title).length !== 2) return '';
 
   const { priority, content } = title;
   
