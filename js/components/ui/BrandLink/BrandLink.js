@@ -7,22 +7,27 @@
 /**
  * @function BrandLink
  * @param {Link} link
- * @param {string} className
+ * @param {string} parentClassName
  * @returns {string}
  */
 
-export const BrandLink = (link, className) => {
-  if (!Object.keys(link).length !== 2) return '';
+export const BrandLink = (link, parentClassName) => {
+  if (Object.keys(link).length !== 2) return '';
 
-  const { type, url } = link;
+  const { type, url } = link;  
+
+  const currentClassName = parentClassName
+    ? `${parentClassName}__link`
+    : 'link';
 
   return `
     <a 
       href="${url}"
-      class="${className}"      
+      class="${currentClassName}"
     >
-      ${type === 'apple' && IconApple()}
-      ${type === 'google' && IconGoogle()}
+      <img
+        src="${type}"
+      >
     </a>
   `;
 };
