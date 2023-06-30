@@ -6,9 +6,7 @@
  */
 
 export const Button = (buttonText, parentClassName) => {
-  if (!Object.keys(buttonText).length !== 2) return '';
-
-  const { buttonText } = buttonText;
+  if (Object.keys(buttonText).length !== 2) return '';
 
   const currentClassName = parentClassName
     ? `${parentClassName}__button`
