@@ -54,11 +54,11 @@ export const data = {
       },
       links: [
         {
-          type: '/assets/icons/link-apple.svg',
+          type: 'apple',
           url: 'https://apple.com',
         },
         {
-          type: '/assets/icons/link-google.svg',
+          type: 'google',
           url: 'https://google.com',
         },
       ],
