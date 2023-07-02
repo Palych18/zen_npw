@@ -1,10 +1,7 @@
 import { data } from './data/data.js';
-import { SectionPrimary } from './components/widgets/SectionPrimary/SectionPrimary.js';
+import { SectionPrimary } from './components/widgets/index.js';
 
-const {download} = data.en;
-const {warranty} = data.en;
-const {care} = data.en;
-const {cashback} = data.en;
+const {download, warranty, care, cashback} = data.en;
 
 const $root = document.querySelector('#root');
 
