@@ -21,9 +21,8 @@ export const BrandLink = (link, parentClassName) => {
       href="${url}"
       class="${currentClassName}"
     >
-      <img
-        src="${type}"
-      >
+      ${type === 'apple' && IconApple()}
+      ${type === 'google' && IconGoogle()}
     </a>
   `;
 };
