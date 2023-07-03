@@ -1,4 +1,5 @@
-import { SectionPrimary, data } from './components/widgets/index.js';
+import { data } from './data/data.js';
+import { SectionPrimary } from './components/widgets/index.js';
 
 const {download, warranty, care, cashback} = data.en;
 
