@@ -1,4 +1,8 @@
-/** @typedef {import(./types).Title} Title */
+/**
+ * @typedef {Object} Title
+ * @property {string | number} priority
+ * @property {string} content
+ */
 
 /**
  * @function Title
@@ -8,7 +12,7 @@
  */
 
 export const Title = (title, parentClassName) => {
-  if (!Object.keys(title).length !== 2) return '';
+  if (Object.keys(title).length !== 2) return '';
 
   const { priority, content } = title;
   
