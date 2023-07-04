@@ -1,4 +1,8 @@
-/** @typedef {import(./types).Title} Title */
+/**
+ * @typedef {Object} Title
+ * @property {string | number} priority
+ * @property {string} content
+ */
 
 /**
  * @function Title

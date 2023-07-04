@@ -1,4 +1,8 @@
-/** @typedef {import(./types).Image} Image */
+/**
+ * @typedef {Object} Image
+ * @property {string} source
+ * @property {string} description
+ */
 
 /**
  * @function Image

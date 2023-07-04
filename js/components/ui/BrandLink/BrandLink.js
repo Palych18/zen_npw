@@ -1,4 +1,8 @@
-/** @typedef {import(./types).Link} Link */
+/**
+ * @typedef {Object} Link
+ * @property {string} type
+ * @property {string} url
+ */
 
 /**
  * @function BrandLink
