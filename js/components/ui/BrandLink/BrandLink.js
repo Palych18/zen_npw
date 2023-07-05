@@ -1,3 +1,6 @@
+import { IconApple } from './ui/IconApple.js';
+import { IconGoogle } from './ui/IconGoogle.js';
+
 /** @typedef {import('./types').Link} Link */
 
 /**
@@ -10,7 +13,7 @@
 export const BrandLink = (link, parentClassName) => {
   if (Object.keys(link).length !== 2) return '';
 
-  const { type, url } = link;  
+  const { type, url } = link;
 
   const currentClassName = parentClassName
     ? `${parentClassName}__link`
@@ -21,8 +24,7 @@ export const BrandLink = (link, parentClassName) => {
       href="${url}"
       class="${currentClassName}"
     >
-      ${type === 'apple' && IconApple()}
-      ${type === 'google' && IconGoogle()}
+      ${type === 'apple' ? IconApple() : IconGoogle()}
     </a>
   `;
 };
