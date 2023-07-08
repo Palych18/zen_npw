@@ -52,16 +52,16 @@ export const data = {
         source: '/assets/images/1.jpg',
         description: 'Some description for image 1',
       },
-      links: [
-        {
+      links: {
+        apple: {
           type: 'apple',
           url: 'https://apple.com',
         },
-        {
+        google: {
           type: 'google',
           url: 'https://google.com',
         },
-      ],
+      },
     },
     warranty: {
       name: 'warranty',
