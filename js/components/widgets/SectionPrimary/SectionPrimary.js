@@ -19,6 +19,8 @@ export const SectionPrimary = (data) => {
 
   const {name, title, texts, links, image, buttonText} = data;
 
+  const {apple, google} = links || {};
+
   const className = name 
     ? name 
     : 'section-primary';
@@ -30,10 +32,10 @@ export const SectionPrimary = (data) => {
           ${title ? Title(title, className) : ''}
           ${texts?.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
           <div class="${className}__links">
-            ${links?.length > 0 ? links.map((link) => BrandLink(link, className)).join('') : ''}
+            ${apple ? BrandLink(apple, className) : ''}
+            ${google ? BrandLink(google, className) : ''}
           </div>
-          ${image ? Image(image, className) : ''}
-          ${image ? Image(image, className) : ''}
+          ${image ? Image(image, className) : ''}          
           ${buttonText ? Button(buttonText, className) : ''}
         </div>
       </div>

@@ -18,5 +18,8 @@ export interface SectionPrimary {
   title: Title;
   texts: string[];
   image: Image;
-  links?: Link[];
+  links?: {
+    apple: Link;
+    google: Link;
+  };
 };
