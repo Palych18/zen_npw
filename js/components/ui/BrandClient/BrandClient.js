@@ -8,13 +8,13 @@
  */
 
 export const BrandClient = (client, parentClassName) => {
-  if (Object.keys(client).length !== 2) return "";
+  if (Object.keys(client).length !== 2) return '';
 
   const { source, description } = client;
 
   const currentClassName = parentClassName
-    ? `${parentClassName}__brand`
-    : "brand";
+    ? `${parentClassName}__brand_ZZZ`
+    : 'brand';
 
   return `
     <img
