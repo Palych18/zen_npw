@@ -13,7 +13,7 @@ export const BrandClient = (client, parentClassName) => {
   const { source, description } = client;
 
   const currentClassName = parentClassName
-    ? `${parentClassName}__brand_ZZZ`
+    ? `${parentClassName}__brand`
     : 'brand';
 
   return `
