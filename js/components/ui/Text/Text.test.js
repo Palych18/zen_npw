@@ -1,4 +1,4 @@
-import {Text} from './Text.js';
+import { Text } from './Text.js';
 
 describe('Text:', () => {
   it('Unit test 1', () => {
