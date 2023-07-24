@@ -13,6 +13,11 @@ export interface Link {
   url: string;
 };
 
+export interface Client {
+  source: string;
+  description: string;
+};
+
 export interface SectionPrimary {
   name: string;
   title: Title;
@@ -22,4 +27,10 @@ export interface SectionPrimary {
     apple: Link;
     google: Link;
   };
+};
+
+export interface SectionTertiary {
+  name: string;
+  title: Title;
+  brands: Client[];
 };

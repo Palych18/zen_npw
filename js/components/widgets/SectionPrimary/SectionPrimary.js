@@ -26,7 +26,7 @@ export const SectionPrimary = (data) => {
     : 'section-primary';
 
   return `
-    <section class="${className}">
+    <section class="${className}" id="${name}">
       <div class="${className}__wrapper">
         <div class="${className}__text-block">
           ${title ? Title(title, className) : ''}
