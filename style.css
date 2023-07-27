@@ -323,8 +323,9 @@ button {
 }
 
 .clients__brands {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   row-gap: 30px;
 }
 
