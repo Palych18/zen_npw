@@ -4,7 +4,7 @@ import { Image } from '../../ui/Image/Image.js';
 import { BrandLink } from '../../ui/BrandLink/BrandLink.js';
 import { Button } from '../../ui/Button/Button.js';
 
-/** @typedef {import('../../../Schema/types').SectionPrimary} Data */
+/** @typedef {import('./types').SectionData} Data */
 
 /**
  * @function SectionPrimary
@@ -26,7 +26,7 @@ export const SectionPrimary = (data) => {
     : 'section-primary';
 
   return `
-    <section class="${className}">
+    <section class="${className}" id="${name}">
       <div class="${className}__wrapper">
         <div class="${className}__text-block">
           ${title ? Title(title, className) : ''}
