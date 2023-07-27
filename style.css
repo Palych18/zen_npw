@@ -101,6 +101,50 @@ button {
 
 .header__burger {
   margin-left: 20px;
+  height: 20px;
+  width: 30px;
+  position: relative;
+}
+
+.header__burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: black;
+}
+
+.header__burger::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+}
+
+.header__burger::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: black;
+  position: absolute;
+  bottom: 0;
+}
+
+.header__burger.active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.header__burger.active span {
+  opacity: 0;
+}
+
+.header__burger.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
 }
 
 .header__nav {
