@@ -34,3 +34,10 @@ export interface SectionTertiary {
   title: Title;
   brands: Client[];
 };
+
+export interface SectionSecondary {
+  name: string;
+  title: Title;
+  text: string[];
+  buttonText: string;
+};

@@ -2,7 +2,6 @@ import { Title } from '../../ui/Title/Title.js';
 import { Text } from '../../ui/Text/Text.js';
 import { Image } from '../../ui/Image/Image.js';
 import { BrandLink } from '../../ui/BrandLink/BrandLink.js';
-import { Button } from '../../ui/Button/Button.js';
 
 /** @typedef {import('../../../Schema/types').SectionPrimary} Data */
 
@@ -17,7 +16,7 @@ export const SectionPrimary = (data) => {
 
   if (dataKeys.length !== 4 && dataKeys.length !== 5) return '';
 
-  const { name, title, texts, links, image, buttonText } = data;
+  const { name, title, texts, links, image } = data;
 
   const { apple, google } = links || {};
 
@@ -35,8 +34,7 @@ export const SectionPrimary = (data) => {
             ${apple ? BrandLink(apple, className) : ''}
             ${google ? BrandLink(google, className) : ''}
           </div>
-          ${image ? Image(image, className) : ''}          
-          ${buttonText ? Button(buttonText, className) : ''}
+          ${image ? Image(image, className) : ''}
         </div>
       </div>
     </section>
