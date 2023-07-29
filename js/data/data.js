@@ -50,8 +50,7 @@ export const data = {
       ],
       image: {
         source: '/assets/images/1.jpg',
-        description:
-          'We can help with making your shopping experience and money management more ZEN.',
+        description: 'We can help with making your shopping experience and money management more ZEN.',
       },
       links: {
         apple: {
@@ -76,8 +75,7 @@ export const data = {
       ],
       image: {
         source: 'assets/images/2.jpg',
-        description:
-          'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing.',
+        description: 'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing.',
       },
     },
     care: {
@@ -94,8 +92,7 @@ export const data = {
       ],
       image: {
         source: 'assets/images/3.jpg',
-        description:
-          'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
+        description: 'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
       },
     },
     cashback: {
