@@ -1,7 +1,7 @@
 export const data = {
   en: {
     header: {
-      languages: [
+      langs: [
         {
           name: 'RU',
           key: 'ru',
@@ -286,4 +286,4 @@ export const data = {
     },
   },
   ru: {},
-}
+};
