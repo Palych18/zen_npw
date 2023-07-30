@@ -8,8 +8,7 @@ import { Sun } from './ui/Sun.js';
  * @returns {string}
  */
 
-export const Theme = (theme = 'light', parentClassName) => {  
-
+export const Theme = (parentClassName, theme = 'light') => {
   const currentClassName = parentClassName
     ? `${parentClassName}__theme`
     : 'theme';
