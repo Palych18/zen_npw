@@ -11,5 +11,8 @@ export interface Client {
 export interface SectionData {
   name: string;
   title: Title;
-  brands: Client[];
+  brands: {
+    light: Client[];
+    dark: Client[];
+  };  
 };

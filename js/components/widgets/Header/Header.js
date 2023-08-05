@@ -20,7 +20,7 @@ export const Header = (data) => {
     : 'header';
 
   return `
-    <header class="${className}">
+    <header class="${className}" id="header">
       <div class="${className}__wrapper">
         ${Logo(className)}
         ${Navigation(nav, className)}

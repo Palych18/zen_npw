@@ -6,21 +6,20 @@ import { Title } from '../../ui/Title/Title.js';
 /**
  * @function SectionTertiary
  * @param {Data} data
+ * @param {'light' | 'dark'} theme
  * @returns {string}
  */
 
-export const SectionTertiary = (data) => {
+export const SectionTertiary = (data, theme = 'dark') => {
   const dataKeys = Object.keys(data);
-
   if (dataKeys.length !== 3) return '';
-
-  const { name, title, brands } = data;
-
-  if (!brands.length) return '';
+  
+  const { name, title, brands} = data;
+  if (!brands[theme].length) return '';
 
   const className = name
     ? name
-    : 'section-client';
+    : 'section-tertiary';
 
   return `
     <section class="${className}" id="${name}">
@@ -28,12 +27,12 @@ export const SectionTertiary = (data) => {
       <div class="${className}__wrapper">
         <ul class="${className}__brands">
           ${
-            brands.map((brand) => `
+            brands.light.map((brand) => `
               <li class="${className}__brand">
-                ${BrandClient(brand, className)}
+                ${BrandClient(brand)}
               </li>
             `).join('')
-          }        
+          }
         </ul>
       </div>
     </section>

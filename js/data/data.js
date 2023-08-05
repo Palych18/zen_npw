@@ -85,7 +85,6 @@ export const data = {
         content: 'ZEN Care',
       },
       texts: [
-        //prettier-ignore
         'Shopping online is usually a delightful experience. Until it\'s not.',
         'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
         'But, here comes ZEN Care: a free, built-in shopping protection.',
@@ -114,40 +113,76 @@ export const data = {
         priority: 2,
         content: 'Clients',
       },
-      brands: [
-        {
-          source: 'assets/clients/1.svg',
-          description: 'ROSEGAL',
-        },
-        {
-          source: 'assets/clients/2.svg',
-          description: 'Gearbest',
-        },
-        {
-          source: 'assets/clients/3.svg',
-          description: 'allegro',
-        },
-        {
-          source: 'assets/clients/4.svg',
-          description: 'AliExpress',
-        },
-        {
-          source: 'assets/clients/5.svg',
-          description: 'Booking.com',
-        },
-        {
-          source: 'assets/clients/6.svg',
-          description: 'MediaMarkt',
-        },
-        {
-          source: 'assets/clients/7.svg',
-          description: 'RTV EURO AGD',
-        },
-        {
-          source: 'assets/clients/8.svg',
-          description: 'GROUPON',
-        },
-      ],
+      brands: {
+        light: [
+          {
+            source: 'assets/clients/light/1.svg',
+            description: 'ROSEGAL',
+          },
+          {
+            source: 'assets/clients/light/2.svg',
+            description: 'Gearbest',
+          },
+          {
+            source: 'assets/clients/light/3.svg',
+            description: 'allegro',
+          },
+          {
+            source: 'assets/clients/light/4.svg',
+            description: 'AliExpress',
+          },
+          {
+            source: 'assets/clients/light/5.svg',
+            description: 'Booking.com',
+          },
+          {
+            source: 'assets/clients/light/6.svg',
+            description: 'MediaMarkt',
+          },
+          {
+            source: 'assets/clients/light/7.svg',
+            description: 'RTV EURO AGD',
+          },
+          {
+            source: 'assets/clients/light/8.svg',
+            description: 'GROUPON',
+          },
+        ],
+        dark: [
+          {
+            source: 'assets/clients/dark/1.svg',
+            description: 'ROSEGAL',
+          },
+          {
+            source: 'assets/clients/dark/2.svg',
+            description: 'Gearbest',
+          },
+          {
+            source: 'assets/clients/dark/3.svg',
+            description: 'allegro',
+          },
+          {
+            source: 'assets/clients/dark/4.svg',
+            description: 'AliExpress',
+          },
+          {
+            source: 'assets/clients/dark/5.svg',
+            description: 'Booking.com',
+          },
+          {
+            source: 'assets/clients/dark/6.svg',
+            description: 'MediaMarkt',
+          },
+          {
+            source: 'assets/clients/dark/7.svg',
+            description: 'RTV EURO AGD',
+          },
+          {
+            source: 'assets/clients/dark/8.svg',
+            description: 'GROUPON',
+          },
+        ],
+      },
     },
     footer: {
       columns: [
@@ -336,8 +371,7 @@ export const data = {
       ],
       image: {
         source: '/assets/images/1.jpg',
-        description:
-          'Мы можем помочь сделать ваш опыт покупок и управления деньгами более совершенным c ZEN.',
+        description: 'Мы можем помочь сделать ваш опыт покупок и управления деньгами более совершенным c ZEN.',
       },
       links: {
         apple: {
@@ -362,8 +396,7 @@ export const data = {
       ],
       image: {
         source: 'assets/images/2.jpg',
-        description:
-          'Карты ZEN имеют очень удобную функцию, которая поможет, когда ваше устройство выйдет из строя.',
+        description: 'Карты ZEN имеют очень удобную функцию, которая поможет, когда ваше устройство выйдет из строя.',
       },
     },
     care: {
@@ -379,8 +412,7 @@ export const data = {
       ],
       image: {
         source: 'assets/images/3.jpg',
-        description:
-          'ZEN поможет, когда купленная вами вещь окажется бракованной, или совершенно не той, которую вы покупаете.',
+        description: 'ZEN поможет, когда купленная вами вещь окажется бракованной, или совершенно не той, которую вы покупаете.',
       },
     },
     cashback: {
@@ -402,40 +434,76 @@ export const data = {
         priority: 2,
         content: 'Клиенты',
       },
-      brands: [
-        {
-          source: 'assets/clients/1.svg',
-          description: 'ROSEGAL',
-        },
-        {
-          source: 'assets/clients/2.svg',
-          description: 'Gearbest',
-        },
-        {
-          source: 'assets/clients/3.svg',
-          description: 'allegro',
-        },
-        {
-          source: 'assets/clients/4.svg',
-          description: 'AliExpress',
-        },
-        {
-          source: 'assets/clients/5.svg',
-          description: 'Booking.com',
-        },
-        {
-          source: 'assets/clients/6.svg',
-          description: 'MediaMarkt',
-        },
-        {
-          source: 'assets/clients/7.svg',
-          description: 'RTV EURO AGD',
-        },
-        {
-          source: 'assets/clients/8.svg',
-          description: 'GROUPON',
-        },
-      ],
+      brands: {
+        light: [
+          {
+            source: 'assets/clients/light/1.svg',
+            description: 'ROSEGAL',
+          },
+          {
+            source: 'assets/clients/light/2.svg',
+            description: 'Gearbest',
+          },
+          {
+            source: 'assets/clients/light/3.svg',
+            description: 'allegro',
+          },
+          {
+            source: 'assets/clients/light/4.svg',
+            description: 'AliExpress',
+          },
+          {
+            source: 'assets/clients/light/5.svg',
+            description: 'Booking.com',
+          },
+          {
+            source: 'assets/clients/light/6.svg',
+            description: 'MediaMarkt',
+          },
+          {
+            source: 'assets/clients/light/7.svg',
+            description: 'RTV EURO AGD',
+          },
+          {
+            source: 'assets/clients/light/8.svg',
+            description: 'GROUPON',
+          },
+        ],
+        dark: [
+          {
+            source: 'assets/clients/dark/1.svg',
+            description: 'ROSEGAL',
+          },
+          {
+            source: 'assets/clients/dark/2.svg',
+            description: 'Gearbest',
+          },
+          {
+            source: 'assets/clients/dark/3.svg',
+            description: 'allegro',
+          },
+          {
+            source: 'assets/clients/dark/4.svg',
+            description: 'AliExpress',
+          },
+          {
+            source: 'assets/clients/dark/5.svg',
+            description: 'Booking.com',
+          },
+          {
+            source: 'assets/clients/dark/6.svg',
+            description: 'MediaMarkt',
+          },
+          {
+            source: 'assets/clients/dark/7.svg',
+            description: 'RTV EURO AGD',
+          },
+          {
+            source: 'assets/clients/dark/8.svg',
+            description: 'GROUPON',
+          },
+        ],
+      },
     },
     footer: {
       columns: [
