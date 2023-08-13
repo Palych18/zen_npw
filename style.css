@@ -7,8 +7,13 @@
   font-weight: 400;
 }
 
+.app.dark {
+  background: #484848;
+  color: #ffffff;
+}
+
 a {
-  color: #000000;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -39,9 +44,15 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  background: #ffffff;
   border-bottom: 1px solid #aaaaaa;
   z-index: 1;
+  color: #000000;
+  background: #ffffff;
+}
+
+.header.dark {
+  color: #ffffff;
+  background: #484848;
 }
 
 .header::after {
@@ -49,12 +60,13 @@ button {
   display: block;
   height: 50px;
   position: absolute;
-  background: #ffffff;
   top: 0;
   left: 0;
   right: 0;
   border-bottom: 1px solid #aaaaaa;
   z-index: 2;
+  background: inherit;
+  box-shadow: 0px 0px 15px;
 }
 
 .header__wrapper {
@@ -63,18 +75,23 @@ button {
   align-items: center;
   padding: 10px 15px;
   box-shadow: 0px 1px 0px #aaaaaa;
+  background: inherit;
 }
 
 .header__logo {
-  height: 33px;
+  height: 30px;
   width: 77px;
+  color: currentColor;
+  background: inherit;
   z-index: 3;
 }
 
-.header__logo img {
+.header__logo svg {
   height: 100%;
   width: 100%;
   display: block;
+  object-fit: cover;
+  fill: currentColor;
 }
 
 .header__button {
@@ -91,12 +108,22 @@ button {
 .header__lang {
   width: 50px;
   height: 30px;
-  border: 1px solid #000000;
+  color: currentColor;
+  background: inherit;
+  border: 1px solid currentColor;
   border-radius: 4px;
 }
 
 .header__theme {
   margin-left: 20px;
+  width: 26px;
+  height: 26px;
+  background: inherit;
+  color: currentColor;
+}
+
+.header__theme svg {
+  fill: currentColor;
 }
 
 .header__burger {
@@ -104,23 +131,25 @@ button {
   height: 20px;
   width: 30px;
   position: relative;
+  background: inherit;
+  color: currentColor;
 }
 
 .header__burger span {
   display: block;
   height: 2px;
   width: 100%;
-  background: black;
+  background: currentColor;
 }
 
 .header__burger::before {
   content: '';
+  position: absolute;
+  top: 0;
   display: block;
   height: 2px;
   width: 100%;
-  background: black;
-  position: absolute;
-  top: 0;
+  background: currentColor;
 }
 
 .header__burger::after {
@@ -128,7 +157,7 @@ button {
   display: block;
   height: 2px;
   width: 100%;
-  background: black;
+  background: currentColor;
   position: absolute;
   bottom: 0;
 }
@@ -148,24 +177,25 @@ button {
 }
 
 .header__nav {
-  display: none;
+  background: inherit;
 }
 
-.menu {
+.header__menu {
+  /* display: none; */
   position: fixed;
   top: 50px;
   left: 0;
   right: 0;
-  background: #ffffff;
+  background: inherit;
   z-index: 2;
   box-shadow: 0 0 15px;
 }
 
-.menu__item {
+.header__item {
   border-bottom: 1px solid #aaaaaa;
 }
 
-.menu__item a {
+.header__item a {
   display: block;
   padding: 23px 15px;
   font-size: 24px;
@@ -174,7 +204,7 @@ button {
 /* download */
 
 .download {
-  margin-top: 60px;
+  margin-top: 50px;
   padding: 30px 15px;
 }
 
@@ -213,7 +243,7 @@ button {
   margin-top: 30px;
   border: 1px solid #aaaaaa;
   border-radius: 20px;
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 /* warranty */
@@ -302,12 +332,18 @@ button {
 }
 
 .cashback__button {
-  margin-top: 20px;
-  font-size: 16px;
-  border: 1px solid #aaaaaa;
-  border-radius: 30px;
   width: 100%;
   height: 50px;
+  margin-top: 20px;
+  font-size: 16px;
+  background: inherit;
+  border: 1px solid #aaaaaa;
+  border-radius: 30px;
+}
+
+.cashback__button.dark {
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 /* clients */
@@ -317,7 +353,7 @@ button {
 }
 
 .clients__title {
-  display: none; /*спрятали заголовок для семантики*/
+  display: none;
 }
 
 .clients__wrapper {

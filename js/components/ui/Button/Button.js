@@ -13,7 +13,7 @@ export const Button = (buttonText, parentClassName) => {
     : 'button';
 
   return `
-    <button class="${currentClassName}">
+    <button class="${currentClassName}" id="button-order">
       ${buttonText}
     </button>  
   `;
