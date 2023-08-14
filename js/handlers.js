@@ -1,7 +1,9 @@
 import { data } from './data/data.js';
-import { SectionTertiary } from './components/widgets/SectionTertiary/SectionTertiary.js';
-import { IconSun } from './components/features/Theme/ui/IconSun.js';
-import { IconMoon } from './components/features/Theme/ui/IconMoon.js';
+
+import {
+  IconMoon,
+  IconSun,
+} from './shared/icons/index.js';
 
 /**
  * @function handleThemeClick

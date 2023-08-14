@@ -1,5 +1,5 @@
-import { BrandClient } from '../../ui/BrandClient/BrandClient.js';
-import { Title } from '../../ui/Title/Title.js';
+import { BrandClient } from '../../features/index.js';
+import { Title } from '../../shared/ui/index.js';
 
 /** @typedef {import('./types').SectionData} Data */
 

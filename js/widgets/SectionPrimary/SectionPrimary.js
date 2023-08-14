@@ -1,7 +1,10 @@
-import { Title } from '../../ui/Title/Title.js';
-import { Text } from '../../ui/Text/Text.js';
-import { Image } from '../../ui/Image/Image.js';
-import { BrandLink } from '../../ui/BrandLink/BrandLink.js';
+import {
+  Title,
+  Text,
+  Image,
+} from '../../shared/ui/index.js';
+
+import { BrandLink } from '../../features/index.js';
 
 /** @typedef {import('./types').SectionData} Data */
 

@@ -1,4 +1,4 @@
-import { IconLogo } from './ui/IconLogo.js';
+import { IconLogo } from '../../shared/icons/index.js';
 
 /**
  * @function Logo
