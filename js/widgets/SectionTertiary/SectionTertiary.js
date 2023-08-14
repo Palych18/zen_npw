@@ -14,7 +14,7 @@ export const SectionTertiary = (data, theme = 'dark') => {
   const dataKeys = Object.keys(data);
   if (dataKeys.length !== 3) return '';
   
-  const { name, title, brands} = data;
+  const { name, title, brands } = data;
   if (!brands[theme].length) return '';
 
   const className = name
