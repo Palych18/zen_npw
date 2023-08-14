@@ -10,7 +10,7 @@ import {
  * @param {Event} event
  */
 
-export const handlerThemeClick = (event) => {
+export const handleThemeClick = (event) => {
   const { currentTarget } = event;
   const { theme } = currentTarget.dataset;
   const $root = document.getElementById('root');
@@ -55,4 +55,8 @@ export const handlerThemeClick = (event) => {
       $brand.src = brands['light'][index].source;
     });
   }
+};
+
+export const handleLogoClick = () => {
+  window.location.href = '/';
 };

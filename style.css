@@ -181,7 +181,7 @@ button {
 }
 
 .header__menu {
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 50px;
   left: 0;
