@@ -57,6 +57,10 @@ export const handleThemeClick = (event) => {
   }
 };
 
+export const handleLogoClick = () => {
+  window.location.href = '/'
+};
+
 /**
  * @function handleBurgerClick
  * @param {Event} event
