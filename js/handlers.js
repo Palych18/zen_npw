@@ -10,7 +10,7 @@ import {
  * @param {Event} event
  */
 
-export const handlerThemeClick = (event) => {
+export const handleThemeClick = (event) => {
   const { currentTarget } = event;
   const { theme } = currentTarget.dataset;
   const $root = document.getElementById('root');
@@ -54,5 +54,28 @@ export const handlerThemeClick = (event) => {
     $brands.forEach(($brand, index) => {
       $brand.src = brands['light'][index].source;
     });
+  }
+};
+
+/**
+ * @function handleBurgerClick
+ * @param {Event} event
+ */
+
+export const handleBurgerClick = (event) => {
+  const { currentTarget } = event;
+  const { burger } = currentTarget.dataset;
+  const $burger = document.getElementById('burger');
+  const $menu = document.getElementById('menu');
+  
+  if (burger === 'active'){
+    currentTarget.dataset.burger = 'no-active';
+    $burger.classList.add('active');
+    $menu.classList.add('active');
+  }
+  if (burger === 'no-active') {
+    currentTarget.dataset.burger = 'active';
+    $burger.classList.remove('active');
+    $menu.classList.remove('active');
   }
 };

@@ -7,7 +7,10 @@ import {
   SectionTertiary,
 } from './widgets/index.js';
 
-import { handlerThemeClick } from './handlers.js';
+import {
+  handleThemeClick,
+  handleBurgerClick
+} from './handlers.js';
 
 const { en } = data;
 
@@ -21,4 +24,7 @@ $root.insertAdjacentHTML('beforeend', SectionSecondary(en.cashback));
 $root.insertAdjacentHTML('beforeend', SectionTertiary(en.clients));
 
 const $theme = document.querySelector('#theme');
-$theme.addEventListener('click', handlerThemeClick);
+$theme.addEventListener('click', handleThemeClick);
+
+const $burger = document.querySelector('#burger');
+$burger.addEventListener('click', handleBurgerClick);
