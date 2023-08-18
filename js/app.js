@@ -10,6 +10,7 @@ import {
 import {
   handleThemeClick,
   handleLogoClick,
+  handleBurgerClick,
 } from './handlers.js';
 
 const { en } = data;
@@ -28,3 +29,6 @@ $theme.addEventListener('click', handleThemeClick);
 
 const $logo = document.querySelector('#logo');
 $logo.addEventListener('click', handleLogoClick);
+
+const $burger = document.querySelector('#burger');
+$burger.addEventListener('click', handleBurgerClick);
