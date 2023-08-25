@@ -1,15 +1,15 @@
-export interface Lang {
+export type Lang = {
   name: 'RU' | 'EN';
   key: 'ru' | 'en';
 };
 
-export interface Nav {
+export type Nav = {
   target: string;
   content: string;
   type: 'anchor' | 'url';
 };
 
-export interface HeaderData {
+export type HeaderData = {
   langs: Lang[];
   nav: Nav[];
 };

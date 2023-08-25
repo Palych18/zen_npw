@@ -208,7 +208,7 @@ button {
 /* download */
 
 .download {
-  padding: 80px 15px 30px;
+  padding: 80px 15px 0px;
 }
 
 .download__wrapper {
@@ -252,7 +252,7 @@ button {
 /* warranty */
 
 .warranty {
-  padding: 30px 15px;
+  padding: 60px 15px 0px;
 }
 
 .warranty__wrapper {
@@ -284,7 +284,7 @@ button {
 /* care */
 
 .care {
-  padding: 30px 15px;
+  padding: 60px 15px 0px;
 }
 
 .care__wrapper {
@@ -314,7 +314,7 @@ button {
 /* cashback */
 
 .cashback {
-  padding: 30px 15px;
+  padding: 60px 15px 0px;
 }
 
 .cashback__wrapper {
@@ -352,7 +352,7 @@ button {
 /* clients */
 
 .clients {
-  padding: 30px 15px;
+  padding: 60px 15px 30px;
 }
 
 .clients__title {
@@ -418,7 +418,7 @@ button {
 .footer__dev {
 }
 
-.dev__img {
+.developer {
   width: 130px;
   height: 46px;
   display: block;

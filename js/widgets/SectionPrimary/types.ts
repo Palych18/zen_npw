@@ -1,19 +1,19 @@
-export interface Title {
+export type Title = {
   priority: string | number;
   content: string;
 };
 
-export interface Image {
+export type Image = {
   source: string;
   description: string;
 };
 
-export interface Link {
+export type Link = {
   type: string;
   url: string;
 };
 
-export interface SectionData {
+export type SectionData = {
   name: string;
   title: Title;
   texts: string[];

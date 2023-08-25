@@ -1,4 +1,4 @@
-export interface Client {
+export type Client = {
   source: string;
   description: string;
 };

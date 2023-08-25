@@ -1,4 +1,4 @@
-export interface Image {
+export type Image = {
   source: string;
   description: string;
 };

@@ -85,7 +85,7 @@ export const data = {
         content: 'ZEN Care',
       },
       texts: [
-        'Shopping online is usually a delightful experience. Until it\'s not.',
+        "Shopping online is usually a delightful experience. Until it's not.",
         'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
         'But, here comes ZEN Care: a free, built-in shopping protection.',
       ],
@@ -315,8 +315,7 @@ export const data = {
       ],
       developer: {
         type: 'icon',
-        url: 'https://some-dev.com/',
-        name: 'PavelEgoroff',
+        url: 'https://t.me/Palych180',
       },
     },
   },
