@@ -57,6 +57,10 @@ export const handleThemeClick = (event) => {
   }
 };
 
+/**
+ * @function handleLogoClick
+ */
+
 export const handleLogoClick = () => {
   window.location.href = '/'
 };
@@ -82,4 +86,12 @@ export const handleBurgerClick = (event) => {
     $burger.classList.remove('active');
     $menu.classList.remove('active');
   }
+};
+
+/**
+ * @function handleLogoFooterClick
+ */
+
+export const handleLogoFooterClick = () => {
+  window.location.href = '/'
 };

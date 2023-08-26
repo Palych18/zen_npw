@@ -1,9 +1,9 @@
-export interface Title {
+export type Title = {
   priority: string | number;
   content: string;
 };
 
-export interface SectionData {
+export type SectionData = {
   name: string;
   title: Title;
   text: string[];

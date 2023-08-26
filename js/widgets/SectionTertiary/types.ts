@@ -1,14 +1,14 @@
-export interface Title {
+export type Title = {
   priority: string | number;
   content: string;
 };
 
-export interface Client {
+export type Client = {
   source: string;
   description: string;
 };
 
-export interface SectionData {
+export type SectionData = {
   name: string;
   title: Title;
   brands: {

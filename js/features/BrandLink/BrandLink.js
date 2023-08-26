@@ -3,7 +3,7 @@ import {
   IconGoogle,
 } from '../../shared/icons/index.js';
 
-/** @typedef {import('./types.js').Link} Link */
+/** @typedef {import('./types').Link} Link */
 
 /**
  * @function BrandLink
@@ -25,6 +25,7 @@ export const BrandLink = (link, parentClassName) => {
     <a 
       href="${url}"
       class="${currentClassName}"
+      target="_blank"
     >
       ${type === 'apple' ? IconApple() : IconGoogle()}
     </a>
