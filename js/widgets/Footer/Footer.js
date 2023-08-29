@@ -1,5 +1,6 @@
 import { Text } from '../../shared/ui/index.js';
 import {
+  ColumnsFooter,
   Developer,
   LogoFooter,
 } from '../../features/index.js';
@@ -13,13 +14,14 @@ import {
  */
 
 export const Footer = (data) => {
-  const { texts, developer } = data;
+  const { columns, texts, developer } = data;
   const className = 'footer';
 
   return `
     <section class="${className}">
       <div class="${className}__wrapper">
         <div class="${className}__columns">
+          ${ColumnsFooter(columns)}
         </div>
         <div class="${className}__info">
           ${LogoFooter()}

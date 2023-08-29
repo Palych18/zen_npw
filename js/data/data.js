@@ -287,7 +287,7 @@ export const data = {
             {
               type: 'icon',
               url: 'https://in.com',
-              name: 'LinkedIn',
+              content: 'assets/icons/link.svg',
             },
           ],
         },
@@ -299,8 +299,8 @@ export const data = {
           links: [
             {
               type: 'email',
-              url: 'goto@mail.com',
-              content: 'hello@zen.com',
+              url: 'pavel_egoroff@mail.ru',
+              content: 'PavelEgoroff',
             },
           ],
         },
