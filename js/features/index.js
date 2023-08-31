@@ -8,4 +8,5 @@ export { BrandClient } from './BrandClient/BrandClient.js';
 export { Developer } from './Developer/Developer.js';
 export { LogoFooter } from './LogoFooter/LogoFooter.js';
 export { ColumnsFooter } from './ColumnsFooter/ColumnsFooter.js';
+export { ModalOrder } from './ModalOrder/ModalOrder.js';
  

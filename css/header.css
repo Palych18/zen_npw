@@ -1,0 +1,171 @@
+/* header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #aaaaaa;
+  z-index: 1;
+  color: #000000;
+  background: #ffffff;
+}
+
+.header.dark {
+  color: #ffffff;
+  background: #484848;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #aaaaaa;
+  z-index: 2;
+  background: inherit;
+  box-shadow: 0px 0px 15px;
+}
+
+.header__wrapper {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  padding: 10px 15px;
+  box-shadow: 0px 1px 0px #aaaaaa;
+  background: inherit;
+}
+
+.header__logo {
+  height: 30px;
+  width: 77px;
+  color: currentColor;
+  background: inherit;
+  z-index: 3;
+}
+
+.header__logo svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  fill: currentColor;
+}
+
+.header__button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+.header__button img {
+  vertical-align: middle;
+}
+
+.header__lang {
+  width: 50px;
+  height: 30px;
+  color: currentColor;
+  background: inherit;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.header__theme {
+  margin-left: 20px;
+  width: 26px;
+  height: 26px;
+  background: inherit;
+  color: currentColor;
+}
+
+.header__theme svg {
+  fill: currentColor;
+}
+
+.header__burger {
+  margin-left: 20px;
+  height: 20px;
+  width: 30px;
+  position: relative;
+  background: inherit;
+  color: currentColor;
+}
+
+.header__burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+}
+
+.header__burger::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+}
+
+.header__burger::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  position: absolute;
+  bottom: 0;
+}
+
+.header__burger.active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.header__burger.active span {
+  opacity: 0;
+}
+
+.header__burger.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.header__nav {
+  background: inherit;
+}
+
+.header__menu {
+  position: fixed;
+  top: -150%;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background: inherit;
+  transition:  0.5s;
+  visibility: hidden;
+}
+
+.header__menu.active {
+  top: 50px;
+  overflow-y: scroll;
+  visibility: visible;
+
+}
+
+.header__item {
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.header__item a {
+  display: block;
+  padding: 23px 15px;
+  font-size: 24px;
+}

@@ -1,0 +1,28 @@
+/* clients */
+
+.clients {
+  padding: 60px 15px 30px;
+}
+
+.clients__title {
+  display: none;
+}
+
+.clients__wrapper {
+}
+
+.clients__brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  row-gap: 30px;
+}
+
+.clients__brand:nth-child(2n) {
+  justify-self: end;
+}
+
+.clients__brand {
+  width: 130px;
+  height: 47px;
+}

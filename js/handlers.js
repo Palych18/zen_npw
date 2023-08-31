@@ -8,6 +8,7 @@ import {
 /**
  * @function handleThemeClick
  * @param {Event} event
+ * @returns {void}
  */
 
 export const handleThemeClick = (event) => {
@@ -59,6 +60,7 @@ export const handleThemeClick = (event) => {
 
 /**
  * @function handleLogoClick
+ * @returns {void}
  */
 
 export const handleLogoClick = () => {
@@ -68,6 +70,7 @@ export const handleLogoClick = () => {
 /**
  * @function handleBurgerClick
  * @param {Event} event
+ * @returns {void}
  */
 
 export const handleBurgerClick = (event) => {
@@ -90,8 +93,47 @@ export const handleBurgerClick = (event) => {
 
 /**
  * @function handleLogoFooterClick
+ * @returns {void}
  */
 
 export const handleLogoFooterClick = () => {
   window.location.href = '/'
+};
+
+/**
+ * @function handleButtonOrderClick
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handleButtonOrderClick = (event) => {
+  const { currentTarget } = event;
+  const { button } = currentTarget.dataset;
+  const $order = document.getElementById('order');
+  
+  if (button === 'active'){
+    currentTarget.dataset.button = 'no-active';
+    $order.classList.add('active');
+  }
+  if (button === 'no-active'){
+    currentTarget.dataset.button = 'active';
+    $order.classList.add('active');
+  }
+};
+
+/**
+ * @function handleResetButtonClick
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handleResetButtonClick = (event) => {  
+  const { currentTarget } = event;
+  const { button } = currentTarget.dataset;
+  const $order = document.getElementById('order');
+  
+  if (button === 'active'){
+    currentTarget.dataset.button = 'active';
+    $order.classList.remove('active');
+  }
 };
