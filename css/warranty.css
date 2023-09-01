@@ -1,0 +1,31 @@
+/* warranty */
+
+.warranty {
+  padding: 60px 15px 0px;
+}
+
+.warranty__wrapper {
+}
+
+.warranty__text-block {
+}
+
+.warranty__title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.warranty__copy {
+  line-height: 20px;
+}
+
+.warranty__copy:first-of-type {
+  margin: 20px 0px 10px;
+}
+
+.warranty__image {
+  margin-top: 30px;
+  border: 1px solid #aaaaaa;
+  border-radius: 20px;
+  overflow: hidden;
+}

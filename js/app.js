@@ -6,13 +6,16 @@ import {
   SectionSecondary,
   SectionTertiary,
   Footer,
+  Order,
 } from './widgets/index.js';
 
 import {
   handleThemeClick,
   handleLogoClick,
   handleBurgerClick,
-  handleLogoFooterClick
+  handleLogoFooterClick,
+  handleButtonOrderClick,
+  handleResetButtonClick,
 } from './handlers.js';
 
 const { en } = data;
@@ -26,6 +29,7 @@ $root.insertAdjacentHTML('beforeend', SectionPrimary(en.care));
 $root.insertAdjacentHTML('beforeend', SectionSecondary(en.cashback));
 $root.insertAdjacentHTML('beforeend', SectionTertiary(en.clients));
 $root.insertAdjacentHTML('beforeend', Footer(en.footer));
+$root.insertAdjacentHTML('beforeend', Order());
 
 const $theme = document.querySelector('#theme');
 $theme.addEventListener('click', handleThemeClick);
@@ -38,3 +42,9 @@ $burger.addEventListener('click', handleBurgerClick);
 
 const $logoFooter = document.querySelector('#logo-footer');
 $logoFooter.addEventListener('click', handleLogoFooterClick);
+
+const $buttonOrder = document.querySelector('#button-order');
+$buttonOrder.addEventListener('click', handleButtonOrderClick);
+
+const $resetButton = document.querySelector('#reset-button');
+$resetButton.addEventListener('click', handleResetButtonClick);
