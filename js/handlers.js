@@ -20,7 +20,7 @@ export const handleThemeClick = (event) => {
 
   const $brands = [...document.querySelectorAll('img[data-type="brand"]')];
 
-  const $buttonOrder = document.getElementById('button-order');
+  const $buttonOrder = document.getElementById('modal-order-open');
 
   if (theme === 'light') {
     currentTarget.dataset.theme = 'dark';
@@ -101,39 +101,135 @@ export const handleLogoFooterClick = () => {
 };
 
 /**
- * @function handleButtonOrderClick
- * @param {Event} event
+ * @function handleButtonOrderOpenClick
  * @returns {void}
  */
 
-export const handleButtonOrderClick = (event) => {
-  const { currentTarget } = event;
-  const { button } = currentTarget.dataset;
-  const $order = document.getElementById('order');
-  
-  if (button === 'active'){
-    currentTarget.dataset.button = 'no-active';
-    $order.classList.add('active');
-  }
-  if (button === 'no-active'){
-    currentTarget.dataset.button = 'active';
-    $order.classList.add('active');
-  }
+export const handleButtonOrderOpenClick = () => {
+  const $order = document.getElementById('section-order');  
+  $order.classList.add('visibility');
 };
 
 /**
- * @function handleResetButtonClick
+ * @function handleButtonOrderCloseClick
+ * @returns {void}
+ */
+
+export const handleButtonOrderCloseClick = () => {
+  const $order = document.getElementById('section-order');
+  $order.classList.remove('visibility');
+};
+
+/**
+ * @function handleNameInput
  * @param {Event} event
  * @returns {void}
  */
 
-export const handleResetButtonClick = (event) => {  
-  const { currentTarget } = event;
-  const { button } = currentTarget.dataset;
-  const $order = document.getElementById('order');
+export const handleNameInput = ({ currentTarget }) => {
+  const { value } = currentTarget;
   
-  if (button === 'active'){
-    currentTarget.dataset.button = 'active';
-    $order.classList.remove('active');
-  }
+  if (!value.length) {
+    currentTarget.dataset.valid = false;
+    currentTarget.parentElement.classList.remove('invalid');
+    currentTarget.parentElement.classList.remove('valid');
+  }; 
+  if (value.length === 1) {
+    currentTarget.dataset.valid = false;    
+    currentTarget.parentElement.classList.remove('valid');
+    currentTarget.parentElement.classList.add('invalid');
+  };
+  if (value.length > 1) {
+    currentTarget.dataset.valid = true;
+    currentTarget.parentElement.classList.remove('invalid');
+    currentTarget.parentElement.classList.add('valid');
+  };
+};
+
+/**
+ * @function handleTelInput
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handleTelInput = ({ currentTarget }) => {
+  const { value } = currentTarget;
+  const regexpTel = /^[0-9]{11}$/;
+
+  if (!value.length) {
+    currentTarget.dataset.valid = false;
+    currentTarget.parentElement.classList.remove('invalid');
+    currentTarget.parentElement.classList.remove('valid');
+  };
+  if (value.length && value.length !== 11 ) {
+    currentTarget.dataset.valid = false;
+    currentTarget.parentElement.classList.remove('valid');
+    currentTarget.parentElement.classList.add('invalid');
+  };
+  if (regexpTel.test(value)) {
+    currentTarget.dataset.valid = true;
+    currentTarget.parentElement.classList.remove('invalid');
+    currentTarget.parentElement.classList.add('valid');
+  };
+};
+
+/**
+ * @function handleEmailInput
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handleEmailInput = ({ currentTarget }) => {  
+  const { value } = currentTarget;
+  const regexpEmail = /^\S+@\S+\.\S{2,4}$/i;
+
+  if (!value.length) {
+    currentTarget.dataset.valid = false;
+    currentTarget.parentElement.classList.remove('valid');
+    currentTarget.parentElement.classList.remove('invalid');
+  };
+  if (value.length) {
+    currentTarget.dataset.valid = false;
+    currentTarget.parentElement.classList.remove('valid');
+    currentTarget.parentElement.classList.add('invalid');
+  };
+  if (regexpEmail.test(value)) {
+    currentTarget.dataset.valid = true;
+    currentTarget.parentElement.classList.remove('invalid');
+    currentTarget.parentElement.classList.add('valid');
+  };
+};
+
+/**
+ * @function handleConnectionChange
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handleConnectionChange = ({ currentTarget }) => {
+  const { value } = currentTarget;
+
+  if (!value.length) {
+    currentTarget.dataset.valid = false;
+    currentTarget.parentElement.classList.remove('valid');
+    currentTarget.parentElement.classList.remove('invalid');
+  };
+  if (value.length) {
+    currentTarget.dataset.valid = true;
+    currentTarget.parentElement.classList.remove('invalid');
+    currentTarget.parentElement.classList.add('valid');
+  };
+};
+
+/**
+ * @function handlePrivacyChange
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handlePrivacyChange = ({ currentTarget }) => {
+  const { checked } = currentTarget;
+
+  if (checked) currentTarget.dataset.valid = true;
+  if (!checked) currentTarget.dataset.valid = false;
 };

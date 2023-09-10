@@ -6,7 +6,7 @@ import {
   SectionSecondary,
   SectionTertiary,
   Footer,
-  Order,
+  SectionOrder,
 } from './widgets/index.js';
 
 import {
@@ -14,8 +14,13 @@ import {
   handleLogoClick,
   handleBurgerClick,
   handleLogoFooterClick,
-  handleButtonOrderClick,
-  handleResetButtonClick,
+  handleButtonOrderOpenClick,
+  handleButtonOrderCloseClick,
+  handleNameInput,
+  handleTelInput,
+  handleEmailInput,
+  handleConnectionChange,
+  handlePrivacyChange,
 } from './handlers.js';
 
 const { en } = data;
@@ -29,7 +34,7 @@ $root.insertAdjacentHTML('beforeend', SectionPrimary(en.care));
 $root.insertAdjacentHTML('beforeend', SectionSecondary(en.cashback));
 $root.insertAdjacentHTML('beforeend', SectionTertiary(en.clients));
 $root.insertAdjacentHTML('beforeend', Footer(en.footer));
-$root.insertAdjacentHTML('beforeend', Order());
+$root.insertAdjacentHTML('beforeend', SectionOrder());
 
 const $theme = document.querySelector('#theme');
 $theme.addEventListener('click', handleThemeClick);
@@ -43,8 +48,23 @@ $burger.addEventListener('click', handleBurgerClick);
 const $logoFooter = document.querySelector('#logo-footer');
 $logoFooter.addEventListener('click', handleLogoFooterClick);
 
-const $buttonOrder = document.querySelector('#button-order');
-$buttonOrder.addEventListener('click', handleButtonOrderClick);
+const $buttonModalOrderOpen = document.querySelector('#modal-order-open');
+$buttonModalOrderOpen.addEventListener('click', handleButtonOrderOpenClick);
 
-const $resetButton = document.querySelector('#reset-button');
-$resetButton.addEventListener('click', handleResetButtonClick);
+const $buttonModalOrderClose = document.querySelector('#modal-order-close');
+$buttonModalOrderClose.addEventListener('click', handleButtonOrderCloseClick);
+
+const $inputName = document.querySelector('#input-name');
+$inputName.addEventListener('input', handleNameInput);
+
+const $inputTel = document.querySelector('#input-tel');
+$inputTel.addEventListener('input', handleTelInput);
+
+const $inputEmail = document.querySelector('#input-email');
+$inputEmail.addEventListener('input', handleEmailInput);
+
+const $connection = document.querySelector('#select-connection');
+$connection.addEventListener('change', handleConnectionChange);
+
+const $privacyCheckbox = document.querySelector('#privacy');
+$privacyCheckbox.addEventListener('change', handlePrivacyChange);

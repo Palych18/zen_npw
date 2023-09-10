@@ -1,8 +1,5 @@
-import {
-  Title,
-  Text,
-  Button,
-} from '../../shared/ui/index.js';
+import { Title, Text } from '../../shared/ui/index.js';
+import { ModalOrderOpen } from '../../features/index.js';
 
 /** @typedef {import('./types').SectionData} Data */
 
@@ -29,7 +26,7 @@ export const SectionSecondary = (data) => {
         <div class="${className}__text-block">
           ${title ? Title(title, className) : ''}
           ${texts?.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
-          ${buttonText ? Button(buttonText, className) : ''}
+          ${ModalOrderOpen(buttonText)}
         </div>
       </div>
     </section>
