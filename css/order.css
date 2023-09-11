@@ -1,7 +1,7 @@
-.order {
+.section__order {
   display: none;
 }
-.order.active {
+.section__order.visibility {
   position: fixed;
   top: 0;
   right: 0;

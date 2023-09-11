@@ -1,24 +1,43 @@
+/** @typedef {import('./types').Button} Button */
+
 /**
  * @function Button
- * @param {string} buttonText
- * @param {string} parentClassName
+ * @param {Button} props
  * @returns {string}
  */
 
-export const Button = (buttonText, parentClassName) => {
-  if (!buttonText) return '';
+export const Button = (props) => {
 
-  const currentClassName = parentClassName
-    ? `${parentClassName}__button`
+  const { className, typeButton, buttonId, customId, children } = props;
+
+  const currentClassName = className
+    ? `button__${className}`
     : 'button';
+
+  const currentTypeButton = typeButton
+    ? `${typeButton}`
+    : 'button';
+
+  const currentId = buttonId
+    ? `${buttonId}` 
+    : '';
+
+  const currentCustomId = customId
+    ? `${customId}`
+    : '';
+    
+    const currentChildren = children
+      ? `${children}`
+      : '';
 
   return `
     <button
       class="${currentClassName}"
-      id="button-order"
-      data-button="active"
+      type="${currentTypeButton}"
+      id="${currentId}"
+      data-customId="${currentCustomId}"
     >
-      ${buttonText}
-    </button>  
+      ${currentChildren}
+    </button>
   `;
 };
