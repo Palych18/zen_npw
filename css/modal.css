@@ -81,6 +81,10 @@
   outline: none;
 }
 
+.order-form__field:last-of-type {
+  border-bottom: none;
+}
+
 .order-form__field.valid {
   border-color: #09b800;
 }

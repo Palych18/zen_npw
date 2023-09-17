@@ -11,4 +11,5 @@ export { ColumnsFooter } from './ColumnsFooter/ColumnsFooter.js';
 export { ModalOrderForm } from './ModalOrderForm/ModalOrderForm.js';
 export { ModalOrderOpen } from './ModalOrderOpen/ModalOrderOpen.js';
 export { ModalOrderClose } from './ModalOrderClose/ModalOrderClose.js';
+export { ButtonSendOrder } from './ButtonSendOrder/ButtonSendOrder.js';
  

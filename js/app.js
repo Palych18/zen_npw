@@ -16,11 +16,13 @@ import {
   handleLogoFooterClick,
   handleButtonOrderOpenClick,
   handleButtonOrderCloseClick,
+  handleOrderFormClick,
+  handleOrderFormKeyUp,
+  handleOrderFormSubmit,
   handleNameInput,
   handleTelInput,
   handleEmailInput,
   handleConnectionChange,
-  handlePrivacyChange,
 } from './handlers.js';
 
 const { en } = data;
@@ -54,6 +56,11 @@ $buttonModalOrderOpen.addEventListener('click', handleButtonOrderOpenClick);
 const $buttonModalOrderClose = document.querySelector('#modal-order-close');
 $buttonModalOrderClose.addEventListener('click', handleButtonOrderCloseClick);
 
+const $orderForm = document.querySelector('#order-form');
+$orderForm.addEventListener('click', handleOrderFormClick);
+$orderForm.addEventListener('keyup', handleOrderFormKeyUp);
+$orderForm.addEventListener('submit', handleOrderFormSubmit);
+
 const $inputName = document.querySelector('#input-name');
 $inputName.addEventListener('input', handleNameInput);
 
@@ -65,6 +72,3 @@ $inputEmail.addEventListener('input', handleEmailInput);
 
 const $connection = document.querySelector('#select-connection');
 $connection.addEventListener('change', handleConnectionChange);
-
-const $privacyCheckbox = document.querySelector('#privacy');
-$privacyCheckbox.addEventListener('change', handlePrivacyChange);
