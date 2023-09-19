@@ -106,7 +106,7 @@ export const handleLogoFooterClick = () => {
  */
 
 export const handleButtonOrderOpenClick = () => {
-  const $order = document.getElementById('section-order');  
+  const $order = document.getElementById('section-order');
   $order.classList.add('visibility');
 };
 
@@ -118,6 +118,68 @@ export const handleButtonOrderOpenClick = () => {
 export const handleButtonOrderCloseClick = () => {
   const $order = document.getElementById('section-order');
   $order.classList.remove('visibility');
+};
+
+/**
+ * @function handleOrderFormClick
+ * @returns {void}
+ */
+
+export const handleOrderFormClick = ({ currentTarget }) => {  
+  const isNameValid = currentTarget.elements.name.dataset.valid === 'true';
+  const isTelValid = currentTarget.elements.tel.dataset.valid === 'true';
+  const isEmailValid = currentTarget.elements.email.dataset.valid === 'true';
+  const isConnectionValid = currentTarget.elements.connection.dataset.valid === 'true';
+  const isPrivacyChecked = currentTarget.elements.privacy.checked;
+
+  const isFieldsValid = 
+    isNameValid &&
+    isTelValid &&
+    isEmailValid &&
+    isConnectionValid &&
+    isPrivacyChecked;
+
+  submit.disabled = !isFieldsValid;
+};
+
+/**
+ * @function handleOrderFormKeyUp
+ * @returns {void}
+ */
+
+export const handleOrderFormKeyUp = ({ currentTarget }) => {  
+  const isNameValid = currentTarget.elements.name.dataset.valid === 'true';
+  const isTelValid = currentTarget.elements.tel.dataset.valid === 'true';
+  const isEmailValid = currentTarget.elements.email.dataset.valid === 'true';
+  const isConnectionValid = currentTarget.elements.connection.dataset.valid === 'true';
+  const isPrivacyChecked = currentTarget.elements.privacy.checked;
+
+  const isFieldsValid = 
+    isNameValid &&
+    isTelValid &&
+    isEmailValid &&
+    isConnectionValid &&
+    isPrivacyChecked;
+
+  submit.disabled = !isFieldsValid;
+};
+
+/**
+ * @function handleOrderFormSubmit
+ * @returns {void}
+ */
+
+export const handleOrderFormSubmit = (event) => {
+  event.preventDefault();
+  const { elements } = event.currentTarget;  
+  const order = {
+    name: elements.name.value,
+    tel: elements.tel.value,
+    email: elements.email.value,
+    connection: elements.connection.value,
+  };
+
+  console.log({ order });
 };
 
 /**
@@ -135,7 +197,7 @@ export const handleNameInput = ({ currentTarget }) => {
     currentTarget.parentElement.classList.remove('valid');
   }; 
   if (value.length === 1) {
-    currentTarget.dataset.valid = false;    
+    currentTarget.dataset.valid = false;
     currentTarget.parentElement.classList.remove('valid');
     currentTarget.parentElement.classList.add('invalid');
   };
@@ -219,17 +281,4 @@ export const handleConnectionChange = ({ currentTarget }) => {
     currentTarget.parentElement.classList.remove('invalid');
     currentTarget.parentElement.classList.add('valid');
   };
-};
-
-/**
- * @function handlePrivacyChange
- * @param {Event} event
- * @returns {void}
- */
-
-export const handlePrivacyChange = ({ currentTarget }) => {
-  const { checked } = currentTarget;
-
-  if (checked) currentTarget.dataset.valid = true;
-  if (!checked) currentTarget.dataset.valid = false;
 };
