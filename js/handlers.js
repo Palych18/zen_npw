@@ -79,16 +79,30 @@ export const handleBurgerClick = (event) => {
   const $burger = document.getElementById('burger');
   const $menu = document.getElementById('menu');
   
-  if (burger === 'active'){
-    currentTarget.dataset.burger = 'no-active';
+  if (burger === 'no-active'){
+    currentTarget.dataset.burger = 'active';
     $burger.classList.add('active');
     $menu.classList.add('active');
   }
-  if (burger === 'no-active') {
-    currentTarget.dataset.burger = 'active';
+  if (burger === 'active') {
+    currentTarget.dataset.burger = 'no-active';
     $burger.classList.remove('active');
     $menu.classList.remove('active');
   }
+};
+
+/**
+ * @function handleMenuItemClick
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handleMenuItemClick = () => {
+  const $burger = document.getElementById('burger');
+  const $menu = document.getElementById('menu');
+  $burger.dataset.burger = 'no-active';
+  $burger.classList.remove('active');
+  $menu.classList.remove('active');
 };
 
 /**
@@ -169,10 +183,21 @@ export const handleOrderFormKeyUp = ({ currentTarget }) => {
  * @returns {void}
  */
 
-export const handleOrderFormSubmit = (event) => {
+export const handleOrderFormSubmit = async (event) => {
   event.preventDefault();
-  const { elements } = event.currentTarget;  
+  
+  const $modal = document.querySelector('#section-order');
+  const $inputName = document.querySelector('#input-name');
+  const $inputTel = document.querySelector('#input-tel');
+  const $inputEmail = document.querySelector('#input-email');
+  const $inputConnection = document.querySelector('#select-connection');
+
+  const $form = event.currentTarget;
+  const { elements } = event.currentTarget;
+
   const order = {
+    type: 'order',
+    data: new Date().toLocaleDateString(),
     name: elements.name.value,
     tel: elements.tel.value,
     email: elements.email.value,
@@ -180,6 +205,26 @@ export const handleOrderFormSubmit = (event) => {
   };
 
   console.log({ order });
+
+  const requestUrl = 'https://zen-npw-default-rtdb.firebaseio.com/en/orders/.json';
+  const requestOptions = {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(order),
+  };
+
+  const response = await fetch(requestUrl, requestOptions);
+  const responseData = await response.json();
+
+  console.log({ responseData });
+
+  $form.reset();
+  $modal.classList.remove('visibility');
+  $inputName.parentElement.classList.remove('valid');
+  $inputTel.parentElement.classList.remove('valid');
+  $inputEmail.parentElement.classList.remove('valid');
+  $inputConnection.parentElement.classList.remove('valid');
+  submit.disabled = true;
 };
 
 /**

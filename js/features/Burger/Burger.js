@@ -13,7 +13,7 @@ export const Burger = (parentClassName) => {
     <button
       class="${currentClassName}"
       id="burger"
-      data-burger="active"
+      data-burger="no-active"
     >
       <span></span>
     </button>
