@@ -17,7 +17,7 @@ export const MenuItem = (menuItem, parentClassName) => {
     : 'menu-item';
 
   return `
-    <li class="${currentClassName}">
+    <li class="${currentClassName}" id="menu-item">
       <a href="#${target}">${content}</a>
     </li>
   `;

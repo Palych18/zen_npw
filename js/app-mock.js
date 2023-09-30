@@ -13,6 +13,7 @@ import {
   handleThemeClick,
   handleLogoClick,
   handleBurgerClick,
+  handleMenuItemClick,
   handleLogoFooterClick,
   handleButtonOrderOpenClick,
   handleButtonOrderCloseClick,
@@ -46,6 +47,11 @@ $logo.addEventListener('click', handleLogoClick);
 
 const $burger = document.querySelector('#burger');
 $burger.addEventListener('click', handleBurgerClick);
+
+const $menuItems = document.querySelectorAll('#menu-item');
+$menuItems.forEach(function(menuItem) {
+  menuItem.addEventListener('click', handleMenuItemClick);
+});
 
 const $logoFooter = document.querySelector('#logo-footer');
 $logoFooter.addEventListener('click', handleLogoFooterClick);
