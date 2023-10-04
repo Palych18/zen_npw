@@ -37,8 +37,8 @@ export const SectionPrimary = (data) => {
             ${apple ? BrandLink(apple, className) : ''}
             ${google ? BrandLink(google, className) : ''}
           </div>
-          ${image ? Image(image, className) : ''}
         </div>
+        ${image ? Image(image, className) : ''}
       </div>
     </section>
   `;

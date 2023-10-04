@@ -1,13 +1,40 @@
 /* cashback */
 
 .cashback {
-  padding: 60px 15px 0px;
+  padding: 30px 15px 0px;
 }
 
 .cashback__wrapper {
+  margin-top: 30px;
 }
 
-.cashback__text-block {
+@media (min-width: 768px) {
+  .cashback__wrapper {
+    width: 460px;
+    margin: 50px auto 0;
+  }
+}
+
+@media (min-width: 1152px) {
+  .cashback__wrapper {
+    width: 500px;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cashback__wrapper {
+    width: 580px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cashback__text-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .cashback__title {
@@ -16,9 +43,43 @@
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .cashback__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .cashback__title {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cashback__title {
+    font-size: 40px;
+  }
+}
+
 .cashback__copy {
   margin-top: 10px;
   line-height: 20px;
+}
+
+@media (min-width: 1152px) {
+  .cashback__copy {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cashback__copy {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .button__order-open {
@@ -35,4 +96,26 @@
 .button__order-open.dark {
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+
+@media (min-width: 768px) {
+  .button__order-open {
+    width: 225px;
+    margin: 20px auto 0;
+  }
+}
+
+@media (min-width: 1152px) {
+  .button__order-open {
+    width: 243px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .button__order-open {
+    width: 282px;
+    height: 67px;
+    margin-top: 30px;
+  }
 }
