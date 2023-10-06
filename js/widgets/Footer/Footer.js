@@ -24,9 +24,11 @@ export const Footer = (data) => {
           ${ColumnsFooter(columns)}
         </div>
         <div class="${className}__info">
-          ${LogoFooter()}
-          ${texts?.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
-          <div class="footer_dev">
+          <div class="${className}__content">
+            ${LogoFooter()}
+            ${texts?.length > 0 ? texts.map((text) => Text(text, className)).join('') : ''}
+          </div>
+          <div class="${className}__dev">
             ${Developer(developer)}
           </div>
         </div>

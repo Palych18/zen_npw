@@ -1,26 +1,91 @@
 /* warranty */
 
 .warranty {
-  padding: 60px 15px 0px;
+  padding: 30px 15px 0;
 }
 
 .warranty__wrapper {
+  margin-top: 30px;
 }
 
-.warranty__text-block {
+@media (min-width: 768px) {
+  .warranty__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    width: 690px;
+    margin: 30px auto 0;
+  }
+}
+
+@media (min-width: 1152px) {
+  .warranty__wrapper {
+    gap: 40px;
+    width: 930px;
+    margin: 40px auto 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warranty__wrapper {
+    gap: 110px;
+    width: 1110px;
+    margin: 50px auto 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .warranty__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
 }
 
 .warranty__title {
   font-size: 26px;
   font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .warranty__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .warranty__title {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warranty__title {
+    font-size: 40px;
+  }
 }
 
 .warranty__copy {
+  margin-top: 10px;
   line-height: 20px;
 }
 
-.warranty__copy:first-of-type {
-  margin: 20px 0px 10px;
+@media (min-width: 1152px) {
+  .warranty__copy {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warranty__copy {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .warranty__image {
@@ -28,4 +93,11 @@
   border: 1px solid #aaaaaa;
   border-radius: 20px;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .warranty__image {
+    margin-top: 0px;
+    flex: 1;
+  }
 }
