@@ -1,3 +1,5 @@
+@import 'vars';
+
 .header {
   position: fixed;
   top: 0;
@@ -15,7 +17,7 @@
 }
 
 .header::after {
-  content: "";
+  content: '';
   display: block;
   height: 50px;
   position: absolute;
@@ -28,11 +30,12 @@
   box-shadow: 0px 0px 15px;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header::after {
     height: 70px;
   }
 }
+
 .header__wrapper {
   display: flex;
   height: 30px;
@@ -42,13 +45,14 @@
   background: inherit;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .header__wrapper {
     width: 690px;
     margin: 0 auto;
   }
 }
-@media (min-width: 1152px) {
+
+@media (min-width: $breakpoint-lg) {
   .header__wrapper {
     width: 930px;
     height: 40px;
@@ -56,11 +60,13 @@
     margin: 0 auto;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: $breakpoint-xl) {
   .header__wrapper {
     width: 1110px;
   }
 }
+
 .header__logo {
   height: 30px;
   width: 77px;
@@ -70,18 +76,18 @@
   cursor: pointer;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__logo {
     height: 40px;
     width: 102px;
   }
 }
+
 .header__logo svg {
   height: 100%;
   width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   fill: currentColor;
 }
 
@@ -92,16 +98,18 @@
   z-index: 3;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__button {
     margin-left: 40px;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: $breakpoint-xl) {
   .header__button {
     margin-left: 50px;
   }
 }
+
 .header__button img {
   vertical-align: middle;
 }
@@ -116,12 +124,13 @@
   cursor: pointer;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__lang {
     width: 60px;
     height: 40px;
   }
 }
+
 .header__theme {
   margin-left: 20px;
   width: 26px;
@@ -131,18 +140,20 @@
   cursor: pointer;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__theme {
     margin-left: 40px;
     width: 40px;
     height: 40px;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: $breakpoint-xl) {
   .header__theme {
     margin-left: 50px;
   }
 }
+
 .header__theme svg {
   fill: currentColor;
 }
@@ -157,11 +168,12 @@
   cursor: pointer;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__burger {
-    display: none;
-  }
+  display: none;
 }
+}
+
 .header__burger span {
   display: block;
   height: 2px;
@@ -170,7 +182,7 @@
 }
 
 .header__burger::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   display: block;
@@ -180,7 +192,7 @@
 }
 
 .header__burger::after {
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   width: 100%;
@@ -207,11 +219,12 @@
   background: inherit;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__nav {
     margin-left: auto;
-  }
 }
+}
+
 .header__menu {
   position: fixed;
   top: -150%;
@@ -220,11 +233,11 @@
   display: flex;
   flex-direction: column;
   background: inherit;
-  transition: 0.5s;
+  transition:  0.5s;
   visibility: hidden;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__menu {
     width: 530px;
     position: relative;
@@ -236,16 +249,18 @@
     background: inherit;
     visibility: visible;
     margin-left: auto;
-    transition: 0s;
+    transition:  0s;
     z-index: 3;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: $breakpoint-xl) {
   .header__menu {
     width: 567px;
     gap: 50px;
   }
 }
+
 .header__menu.active {
   top: 50px;
   overflow-y: scroll;
@@ -256,21 +271,22 @@
   border-bottom: 1px solid #aaaaaa;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__item {
     border-bottom: none;
   }
 }
+
 .header__item a {
   display: block;
   padding: 23px 15px;
   font-size: 24px;
 }
 
-@media (min-width: 1152px) {
+@media (min-width: $breakpoint-lg) {
   .header__item a {
     display: flex;
     padding: 0px;
     font-size: 20px;
   }
-}/*# sourceMappingURL=header.css.map */
+}

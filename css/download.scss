@@ -1,3 +1,5 @@
+@import 'vars';
+
 .download {
   padding: 60px 15px 0;
 }
@@ -6,7 +8,7 @@
   margin-top: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .download__wrapper {
     display: flex;
     gap: 30px;
@@ -14,21 +16,24 @@
     margin: 30px auto 0;
   }
 }
-@media (min-width: 1152px) {
+
+@media (min-width: $breakpoint-lg) {
   .download__wrapper {
     gap: 40px;
     width: 930px;
     margin: 40px auto 10px;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: $breakpoint-xl) {
   .download__wrapper {
     gap: 110px;
     width: 1110px;
     margin: 50px auto 20px;
   }
 }
-@media (min-width: 768px) {
+
+@media (min-width: $breakpoint-md) {
   .download__text-block {
     display: flex;
     flex-direction: column;
@@ -36,61 +41,69 @@
     flex: 1;
   }
 }
+
 .download__title {
   font-size: 30px;
   font-weight: 700;
   line-height: 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .download__title {
     font-size: 36px;
   }
 }
-@media (min-width: 1152px) {
+
+@media (min-width: $breakpoint-lg) {
   .download__title {
     font-size: 42px;
     line-height: 60px;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: $breakpoint-xl) {
   .download__title {
     font-size: 56px;
     line-height: 75px;
   }
 }
+
 .download__copy {
   margin-top: 10px;
   line-height: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .download__copy {
     margin-top: 20px;
   }
 }
-@media (min-width: 1152px) {
+
+@media (min-width: $breakpoint-lg) {
   .download__copy {
     font-size: 18px;
     line-height: 25px;
     margin-top: 20px;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: $breakpoint-xl) {
   .download__copy {
     font-size: 20px;
     line-height: 30px;
   }
 }
+
 .download__links {
   margin-top: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .download__links {
     display: flex;
   }
 }
+
 .download__link {
   display: block;
   width: 150px;
@@ -101,12 +114,13 @@
   margin-top: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .download__link:last-child {
     margin-top: 0;
     margin-left: 20px;
   }
 }
+
 .download__image {
   margin-top: 30px;
   border: 1px solid #aaaaaa;
@@ -114,9 +128,9 @@
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .download__image {
     margin-top: 0px;
     flex: 1;
   }
-}/*# sourceMappingURL=download.css.map */
+}

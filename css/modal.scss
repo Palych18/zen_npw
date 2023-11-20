@@ -1,6 +1,7 @@
 /* modal */
-.modal {
-  font-family: "Nunito";
+
+.modal {  
+  font-family: 'Nunito';
   color: #000000;
   width: 100%;
   max-width: 400px;
@@ -61,7 +62,7 @@
 .order-form {
   margin: 5px 20px 35px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 .order-form__field {
@@ -74,7 +75,7 @@
 
 .order-form__field input {
   width: 100%;
-  font-family: "Nunito";
+  font-family: 'Nunito';
   border: none;
   color: #aaaaaa;
   outline: none;
@@ -94,7 +95,7 @@
 
 .order-form__select {
   width: 100%;
-  font-family: "Nunito";
+  font-family: 'Nunito';
   border: none;
   color: #aaaaaa;
   outline: none;
@@ -102,11 +103,6 @@
 
 .order-form__select:focus {
   border: none;
-}
-
-input::-moz-placeholder {
-  padding-left: 5px;
-  color: #aaaaaa;
 }
 
 input::placeholder {
@@ -119,7 +115,7 @@ input::placeholder {
   text-decoration: underline;
 }
 
-.order-form__field input[type=checkbox] {
+.order-form__field input[type="checkbox"] {
   width: auto;
 }
 
@@ -136,4 +132,4 @@ input::placeholder {
 .order-form__submit:disabled {
   opacity: 0.3;
   cursor: no-drop;
-}/*# sourceMappingURL=modal.css.map */
+}
