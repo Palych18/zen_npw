@@ -1,15 +1,13 @@
-/* column */
+@import 'vars';
 
 .column {
 }
 
-.column__title {  
+.column__title {
   font-size: 16px;
   font-weight: 700;
-}
 
-@media (min-width: 1152px) {
-  .column__title {  
+  @media (min-width: $breakpoint-lg) {
     font-size: 20px;
   }
 }
@@ -20,14 +18,14 @@
 
 .column__item {
   margin-top: 10px;
-}
 
-@media (min-width: 1152px) {
-  .column__item {  
+  @media (min-width: $breakpoint-lg) {
     margin-top: 15px;
   }
+}
 
-  .column__item:first-child {  
+.column__item:first-child {
+  @media (min-width: $breakpoint-lg) {
     margin-top: 10px;
   }
 }
@@ -41,10 +39,8 @@
   font-size: 14px;
   font-weight: 400;
   color: #ffffff;
-}
 
-@media (min-width: 1152px) {
-  .column__item p {  
+  @media (min-width: $breakpoint-lg) {
     font-size: 16px;
   }
 }

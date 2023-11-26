@@ -1,4 +1,4 @@
-/* cashback */
+@import 'vars';
 
 .cashback {
   padding: 30px 15px 0px;
@@ -6,31 +6,25 @@
 
 .cashback__wrapper {
   margin-top: 30px;
-}
 
-@media (min-width: 768px) {
-  .cashback__wrapper {
+  @media (min-width: $breakpoint-md) {
     width: 460px;
     margin: 50px auto 0;
   }
-}
 
-@media (min-width: 1152px) {
-  .cashback__wrapper {
+  @media (min-width: $breakpoint-lg) {
     width: 500px;
     margin-top: 40px;
   }
-}
 
-@media (min-width: 1440px) {
-  .cashback__wrapper {
+  @media (min-width: $breakpoint-xl) {
     width: 580px;
     margin-top: 50px;
   }
 }
 
-@media (min-width: 768px) {
-  .cashback__text-block {
+.cashback__text-block {
+  @media (min-width: $breakpoint-md) {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -41,23 +35,17 @@
   margin-bottom: 20px;
   font-size: 26px;
   font-weight: 700;
-}
 
-@media (min-width: 768px) {
-  .cashback__title {
+  @media (min-width: $breakpoint-md) {
     font-size: 30px;
     margin-bottom: 10px;
   }
-}
 
-@media (min-width: 1152px) {
-  .cashback__title {
+  @media (min-width: $breakpoint-lg) {
     font-size: 34px;
   }
-}
 
-@media (min-width: 1440px) {
-  .cashback__title {
+  @media (min-width: $breakpoint-xl) {
     font-size: 40px;
   }
 }
@@ -65,17 +53,13 @@
 .cashback__copy {
   margin-top: 10px;
   line-height: 20px;
-}
 
-@media (min-width: 1152px) {
-  .cashback__copy {
+  @media (min-width: $breakpoint-lg) {
     font-size: 18px;
     line-height: 25px;
   }
-}
 
-@media (min-width: 1440px) {
-  .cashback__copy {
+  @media (min-width: $breakpoint-xl) {
     margin-top: 20px;
     font-size: 20px;
     line-height: 30px;
@@ -91,31 +75,25 @@
   border: 1px solid #aaaaaa;
   border-radius: 30px;
   cursor: pointer;
+
+  @media (min-width: $breakpoint-md) {
+    width: 225px;
+    margin: 20px auto 0;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 243px;
+    height: 55px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    width: 282px;
+    height: 67px;
+    margin-top: 30px;
+  }
 }
 
 .button__order-open.dark {
   color: #ffffff;
   border: 1px solid #ffffff;
-}
-
-@media (min-width: 768px) {
-  .button__order-open {
-    width: 225px;
-    margin: 20px auto 0;
-  }
-}
-
-@media (min-width: 1152px) {
-  .button__order-open {
-    width: 243px;
-    height: 55px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .button__order-open {
-    width: 282px;
-    height: 67px;
-    margin-top: 30px;
-  }
 }
