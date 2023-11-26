@@ -1,3 +1,5 @@
+@import 'vars';
+
 .header {
   position: fixed;
   top: 0;
@@ -15,7 +17,7 @@
 }
 
 .header::after {
-  content: "";
+  content: '';
   display: block;
   height: 50px;
   position: absolute;
@@ -26,13 +28,12 @@
   z-index: 2;
   background: inherit;
   box-shadow: 0px 0px 15px;
-}
 
-@media (min-width: 1152px) {
-  .header::after {
+  @media (min-width: $breakpoint-lg) {
     height: 70px;
   }
 }
+
 .header__wrapper {
   display: flex;
   height: 30px;
@@ -40,27 +41,24 @@
   padding: 10px 15px;
   box-shadow: 0px 1px 0px #aaaaaa;
   background: inherit;
-}
 
-@media (min-width: 768px) {
-  .header__wrapper {
+  @media (min-width: $breakpoint-md) {
     width: 690px;
     margin: 0 auto;
   }
-}
-@media (min-width: 1152px) {
-  .header__wrapper {
+
+  @media (min-width: $breakpoint-lg) {
     width: 930px;
     height: 40px;
     padding: 15px;
     margin: 0 auto;
   }
-}
-@media (min-width: 1440px) {
-  .header__wrapper {
+
+  @media (min-width: $breakpoint-xl) {
     width: 1110px;
   }
 }
+
 .header__logo {
   height: 30px;
   width: 77px;
@@ -68,20 +66,18 @@
   background: inherit;
   z-index: 3;
   cursor: pointer;
-}
 
-@media (min-width: 1152px) {
-  .header__logo {
+  @media (min-width: $breakpoint-lg) {
     height: 40px;
     width: 102px;
   }
 }
+
 .header__logo svg {
   height: 100%;
   width: 100%;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   fill: currentColor;
 }
 
@@ -90,18 +86,16 @@
   display: flex;
   align-items: center;
   z-index: 3;
-}
 
-@media (min-width: 1152px) {
-  .header__button {
+  @media (min-width: $breakpoint-lg) {
     margin-left: 40px;
   }
-}
-@media (min-width: 1440px) {
-  .header__button {
+
+  @media (min-width: $breakpoint-xl) {
     margin-left: 50px;
   }
 }
+
 .header__button img {
   vertical-align: middle;
 }
@@ -114,14 +108,13 @@
   border: 1px solid currentColor;
   border-radius: 4px;
   cursor: pointer;
-}
 
-@media (min-width: 1152px) {
-  .header__lang {
+  @media (min-width: $breakpoint-lg) {
     width: 60px;
     height: 40px;
   }
 }
+
 .header__theme {
   margin-left: 20px;
   width: 26px;
@@ -129,20 +122,18 @@
   background: inherit;
   color: currentColor;
   cursor: pointer;
-}
 
-@media (min-width: 1152px) {
-  .header__theme {
+  @media (min-width: $breakpoint-lg) {
     margin-left: 40px;
     width: 40px;
     height: 40px;
   }
-}
-@media (min-width: 1440px) {
-  .header__theme {
+
+  @media (min-width: $breakpoint-xl) {
     margin-left: 50px;
   }
 }
+
 .header__theme svg {
   fill: currentColor;
 }
@@ -155,13 +146,12 @@
   background: inherit;
   color: currentColor;
   cursor: pointer;
-}
 
-@media (min-width: 1152px) {
-  .header__burger {
+  @media (min-width: $breakpoint-lg) {
     display: none;
   }
 }
+
 .header__burger span {
   display: block;
   height: 2px;
@@ -170,7 +160,7 @@
 }
 
 .header__burger::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   display: block;
@@ -180,7 +170,7 @@
 }
 
 .header__burger::after {
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   width: 100%;
@@ -205,13 +195,12 @@
 
 .header__nav {
   background: inherit;
-}
 
-@media (min-width: 1152px) {
-  .header__nav {
+  @media (min-width: $breakpoint-lg) {
     margin-left: auto;
   }
 }
+
 .header__menu {
   position: fixed;
   top: -150%;
@@ -220,12 +209,10 @@
   display: flex;
   flex-direction: column;
   background: inherit;
-  transition: 0.5s;
+  transition:  0.5s;
   visibility: hidden;
-}
 
-@media (min-width: 1152px) {
-  .header__menu {
+  @media (min-width: $breakpoint-lg) {
     width: 530px;
     position: relative;
     display: flex;
@@ -236,16 +223,16 @@
     background: inherit;
     visibility: visible;
     margin-left: auto;
-    transition: 0s;
+    transition:  0s;
     z-index: 3;
   }
-}
-@media (min-width: 1440px) {
-  .header__menu {
+
+  @media (min-width: $breakpoint-xl) {
     width: 567px;
     gap: 50px;
   }
 }
+
 .header__menu.active {
   top: 50px;
   overflow-y: scroll;
@@ -254,23 +241,20 @@
 
 .header__item {
   border-bottom: 1px solid #aaaaaa;
-}
 
-@media (min-width: 1152px) {
-  .header__item {
+  @media (min-width: $breakpoint-lg) {
     border-bottom: none;
   }
 }
+
 .header__item a {
   display: block;
   padding: 23px 15px;
   font-size: 24px;
-}
 
-@media (min-width: 1152px) {
-  .header__item a {
+  @media (min-width: $breakpoint-lg) {
     display: flex;
     padding: 0px;
     font-size: 20px;
   }
-}/*# sourceMappingURL=header.css.map */
+}

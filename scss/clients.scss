@@ -2,16 +2,12 @@
 
 .clients {
   padding: 30px 15px 30px;
-}
 
-@media (min-width: $breakpoint-lg) {
-  .clients {
+  @media (min-width: $breakpoint-lg) {
     padding-bottom: 40px;
   }
-}
 
-@media (min-width: $breakpoint-xl) {
-  .clients {
+  @media (min-width: $breakpoint-xl) {
     padding-bottom: 50px;
   }
 }
@@ -22,22 +18,16 @@
 
 .clients__wrapper {
   margin-top: 30px;
-}
 
-@media (min-width: $breakpoint-md) {
-  .clients__wrapper {
+  @media (min-width: $breakpoint-md) {
     margin-top: 50px;
   }
-}
 
-@media (min-width: $breakpoint-lg) {
-  .clients__wrapper {
+  @media (min-width: $breakpoint-lg) {
     margin-top: 50px;
   }
-}
 
-@media (min-width: $breakpoint-xl) {
-  .clients__wrapper {
+  @media (min-width: $breakpoint-xl) {
     margin-top: 70px;
   }
 }
@@ -46,26 +36,20 @@
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(2, 1fr);
-}
 
-@media (min-width: $breakpoint-md) {
-  .clients__brands {
+  @media (min-width: $breakpoint-md) {
     width: 690px;
     gap: 30px;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
   }
-}
 
-@media (min-width: $breakpoint-lg) {
-  .clients__brands {
+  @media (min-width: $breakpoint-lg) {
     width: 930px;
     gap: 43px;
   }
-}
 
-@media (min-width: $breakpoint-xl) {
-  .clients__brands {
+  @media (min-width: $breakpoint-xl) {
     width: 1110px;
     gap: 30px;
     grid-template-columns: repeat(5, 1fr);
@@ -79,17 +63,13 @@
 .clients__brand {
   width: 130px;
   height: 47px;
-}
 
-@media (min-width: $breakpoint-md) {
-  .clients__brand {
+  @media (min-width: $breakpoint-md) {
     width: 150px;
     height: 54px;
   }
-}
 
-@media (min-width: $breakpoint-lg) {
-  .clients__brand {
+  @media (min-width: $breakpoint-lg) {
     width: 200px;
     height: 72px;
   }
